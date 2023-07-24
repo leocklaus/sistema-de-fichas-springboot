@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import lck.fichasloja.api.dto.controller.OperationDTO;
+import lck.fichasloja.api.dto.OperationDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.UpdateTimestamp;

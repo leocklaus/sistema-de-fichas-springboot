@@ -27,9 +27,29 @@ public class CashierService {
         return new CashierDTO(cashier);
     }
 
+    public CashierDTO save(CashierDTO cashierDTO) {
+        Cashier cashier = new Cashier(cashierDTO);
+        cashier = repository.save(cashier);
+        return new CashierDTO(cashier);
+    }
+
+    public CashierDTO update(CashierDTO cashierDTO, Long id){
+        Cashier cashier = returnACashierIfIdExistsOrThrowAnError(id);
+        cashier = copyFromDTOToCashier(cashier, cashierDTO);
+        cashier = repository.save(cashier);
+        return new CashierDTO(cashier);
+    }
+
     private Cashier returnACashierIfIdExistsOrThrowAnError(Long id ) {
         Cashier cashier = repository.findById(id)
                 .orElseThrow(()-> new ResourceNotFound(id));
         return cashier;
     }
+
+    private Cashier copyFromDTOToCashier(Cashier cashier, CashierDTO dto){
+        cashier.setName(dto.getName());
+        return cashier;
+    }
+
+
 }

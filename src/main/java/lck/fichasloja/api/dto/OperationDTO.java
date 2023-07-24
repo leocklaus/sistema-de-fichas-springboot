@@ -1,4 +1,4 @@
-package lck.fichasloja.api.dto.controller;
+package lck.fichasloja.api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
