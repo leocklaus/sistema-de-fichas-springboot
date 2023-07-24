@@ -11,9 +11,6 @@ import java.math.BigDecimal;
 @Setter
 public class ClientInputDTO {
 
-    @NotNull
-    private Long id;
-
     @NotBlank
     private String name;
 

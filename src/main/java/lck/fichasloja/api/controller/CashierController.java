@@ -1,4 +1,4 @@
-package lck.fichasloja.controller;
+package lck.fichasloja.api.controller;
 
 import jakarta.validation.Valid;
 import lck.fichasloja.api.ResourceURIHelper;
@@ -7,7 +7,6 @@ import lck.fichasloja.domain.service.CashierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;

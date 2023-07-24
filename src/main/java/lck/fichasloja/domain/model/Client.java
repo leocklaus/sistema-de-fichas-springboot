@@ -31,7 +31,6 @@ public class Client {
     private LocalDateTime createdAt;
 
     public Client(ClientInputDTO dto){
-        this.id = dto.getId();
         this.name = dto.getName();
         this.amount = dto.getAmount();
     }
