@@ -44,7 +44,7 @@ public class ClientController {
                 .body(client);
     }
 
-    @PostMapping
+    @PutMapping("/{id}")
     public ResponseEntity<ClientDTO> updateClient(
             @Valid @RequestBody ClientInputDTO clientDto, @PathVariable Long id
     ){

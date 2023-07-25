@@ -43,7 +43,7 @@ public class CashierController {
                 .body(cashier);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<CashierDTO> updateCashier(
             @Valid @RequestBody CashierDTO cashier, @RequestParam Long id
     ){
